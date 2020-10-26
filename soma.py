@@ -25,7 +25,7 @@ def timerCallBack(event):
     pub.publish(msg)
         
 pub = rospy.Publisher('/soma', String, queue_size = 1)
-timer = rospy.Timer(rospy.Duration(0.05), timerCallBack)
+timer = rospy.Timer(rospy.Duration(0.05),timerCallBack)
         
 rospy.spin()
     

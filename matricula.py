@@ -11,10 +11,11 @@ def num_callBack(msg):
     num = msg.data
 
 def timerCallBack(event):
+    print(num)
     msg = String()
     msg.data = '2017001704'
     pub.publish(msg)
-    print(num)
+  
     
 pub = rospy.Publisher('/matricula', String,queue_size = 1)
 timer = rospy.Timer(rospy.Duration(1),timerCallBack)

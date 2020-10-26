@@ -15,7 +15,7 @@ def topic_callBack (soma_total):
 rospy.Subscriber('/matricula', String, topic_callBack)
     
 def timerCallBack(event):
-    soma_total = 0
+    soma_total = 1
     
     for i in valor:
         soma_total = soma_total +int(i)

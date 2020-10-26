@@ -15,7 +15,7 @@ def topic_callBack (soma_total):
 rospy.Subscriber('/matricula', String, topic_callBack)
     
 def timerCallBack(event):
-    soma_total = 1
+    soma_total = 0
     
     for i in valor:
         soma_total = soma_total +int(i)
@@ -25,7 +25,7 @@ def timerCallBack(event):
     pub.publish(msg)
         
 pub = rospy.Publisher('/soma', String, queue_size = 1)
-timer = rospy.Timer(rospy.Duration(0.05),timerCallBack)
+timer = rospy.Timer(rospy.Duration(1),timerCallBack)
         
 rospy.spin()
     

@@ -13,7 +13,7 @@ def num_callBack(msg):
 def timerCallBack(event):
     print(num)
     msg = String()
-    msg.data = '20170017041'
+    msg.data = '2017001704'
     pub.publish(msg)
   
     
